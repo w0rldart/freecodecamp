@@ -1,0 +1,4 @@
+ * Initilize gulp
+ * Implement gulp-umd
+ * Implement gulp-jshint
+ * Test npm test command
