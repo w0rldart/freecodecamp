@@ -6,12 +6,12 @@
   "dependencies": {},
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-phpunit": "^0.14.0",
+    "gulp-umd": "^0.2.0",
     "jshint": "^2.9.2",
-    "mocha": "^2.5.3"
+    "tape": "^4.5.1"
   },
   "scripts": {
-    "test": "mocha --reporter spec && jshint ./*.js && jshint ./test/*.js"
+    "test": "tape ./test/**/*.js && jshint ./**/*.js && jshint ./test/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,8 @@
   "keywords": [
     "freecodecamp",
     "javascript",
-    "tdd"
+    "tdd",
+    "tape"
   ],
   "author": "Alex Budurovici",
   "license": "GPL-3.0",
