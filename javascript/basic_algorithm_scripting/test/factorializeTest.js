@@ -2,7 +2,7 @@ var test = require('tape');
 var factorialize = require('../src/factorialize');
 
 test('It should return a number', (assert) => {
-    var result = factorialize(5);
+    const result = factorialize(5);
 
     assert.true(typeof result === 'number', 'It should return a number');
 
@@ -10,8 +10,8 @@ test('It should return a number', (assert) => {
 });
 
 test('Factorialize 1', (assert) => {
-    var expected = 1;
-    var actual = factorialize(1);
+    const expected = 1;
+    const actual = factorialize(1);
 
     assert.equal(expected, actual, 'It should return 1');
 
@@ -19,8 +19,8 @@ test('Factorialize 1', (assert) => {
 });
 
 test('Factorialize 5', (assert) => {
-    var expected = 120;
-    var actual = factorialize(5);
+    const expected = 120;
+    const actual = factorialize(5);
 
     assert.equal(expected, actual, 'It should return 120');
 
@@ -28,8 +28,8 @@ test('Factorialize 5', (assert) => {
 });
 
 test('Factorialize 10', (assert) => {
-    var expected = 3628800;
-    var actual = factorialize(10);
+    const expected = 3628800;
+    const actual = factorialize(10);
 
     assert.equal(expected, actual, 'It should return 3628800');
 
@@ -37,8 +37,8 @@ test('Factorialize 10', (assert) => {
 });
 
 test('Factorialize 20', (assert) => {
-    var expected = 2432902008176640000;
-    var actual = factorialize(20);
+    const expected = 2432902008176640000;
+    const actual = factorialize(20);
 
     assert.equal(expected, actual, 'It should return 2432902008176640000');
 
