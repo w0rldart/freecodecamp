@@ -1,3 +1,12 @@
+/**
+ * Return the provided string with the first letter of each word capitalized.
+ * Make sure the rest of the word is in lower case.
+ *
+ * @url https://www.freecodecamp.com/challenges/title-case-a-sentence
+ * 
+ * @param  {string} str
+ * @return {string}
+ */
 var capitalizeEachWord = (function(str) {
     var strArray = str.toLowerCase().split(' ');
     var arrayLength = strArray.length;

@@ -1,15 +1,23 @@
-var reverseString = (function(string) {
+/**
+ * Reverse the provided string.
+ *
+ * @url https://www.freecodecamp.com/challenges/reverse-a-string
+ * 
+ * @param  {string} str
+ * @return {string}
+ */
+var reverseString = (function(str) {
     'use strict';
 
-    if (string === '') {
-        return string;
+    if (str === '') {
+        return str;
     }
 
     var reversed = '';
-    var i = string.length - 1;
+    var i = str.length - 1;
 
     for (i; i >= 0; i--) {
-        reversed += string[i];
+        reversed += str[i];
     }
 
     return reversed;
