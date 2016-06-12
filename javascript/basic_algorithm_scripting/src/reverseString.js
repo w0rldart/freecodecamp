@@ -1,7 +1,7 @@
 /**
  * Reverse the provided string.
  *
- * @url https://www.freecodecamp.com/challenges/reverse-a-string
+ * @link https://www.freecodecamp.com/challenges/reverse-a-string
  * 
  * @param  {string} str
  * @return {string}

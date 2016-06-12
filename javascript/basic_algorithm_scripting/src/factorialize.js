@@ -8,7 +8,7 @@
  * 
  * For example: 5! = 1 * 2 * 3 * 4 * 5 = 120
  *
- * @url https://www.freecodecamp.com/challenges/factorialize-a-number
+ * @link https://www.freecodecamp.com/challenges/factorialize-a-number
  * 
  * @param  {number} number
  * @return {number}

@@ -1,7 +1,7 @@
 /**
  * Return the length of the longest word in the provided sentence.
  *
- * @url https://www.freecodecamp.com/challenges/find-the-longest-word-in-a-string
+ * @link https://www.freecodecamp.com/challenges/find-the-longest-word-in-a-string
  * 
  * @param  {string} str
  * @return {string}

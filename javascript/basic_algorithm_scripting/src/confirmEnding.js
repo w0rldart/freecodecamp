@@ -1,7 +1,7 @@
 /**
  * Check if a string (first argument, str) ends with the given target string (second argument, target).
  *
- * @url https://www.freecodecamp.com/challenges/confirm-the-ending
+ * @link https://www.freecodecamp.com/challenges/confirm-the-ending
  * 
  * @param  {string} str
  * @param  {string} target
