@@ -5,7 +5,7 @@
  * 
  * @param  {string} str
  * @param  {string} target
- * @return {bool}
+ * @return {boolean}
  */
 var confirmEnding = (function(str, target) {
 	return (str.substr(-target.length) ===  target);
