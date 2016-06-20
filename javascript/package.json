@@ -11,7 +11,7 @@
     "tape": "^4.5.1"
   },
   "scripts": {
-    "test": "tape ./test/**/*.js && jshint ./**/*.js && jshint ./test/**/*.js"
+    "test": "tape ./**/test/*.js && jshint ./**/*.js"
   },
   "repository": {
     "type": "git",

@@ -1,55 +1,67 @@
 var test = require('tape');
 var confirmEnding = require('../src/confirmEnding');
 
-test('It should return a boolean', (assert) => {
-    const result = confirmEnding('Bastian', 'n');
+test('confirmEnding should return a boolean in any case', (assert) => {
+    const resultTrue = confirmEnding('Bastian', 'n');
+    const resultFalse = confirmEnding('Bastian', 'a');
 
-    assert.true(typeof result === 'boolean', 'It should return a boolean');
-
-    assert.end();
-});
-
-test('test confirmEnding for false', (assert) => {
-    const expected = false;
-    const actual = confirmEnding('Walking on water and developing software from a specification are easy if both are frozen', 'specification');
-
-    assert.equal(expected, actual, 'It should return false');
+    assert.true(resultTrue, 'Bastian ends in n');
+    assert.false(resultFalse, 'Bastian doesn\'t end in a');
 
     assert.end();
 });
 
-test('test confirmEnding for true', (assert) => {
-    const expected = true;
-    const actual = confirmEnding('He has to give me a new name', 'name');
+test('confirmEnding tests for false cases', (assert) => {
+    const case1 = {
+        string: 'Walking on water and developing software from a specification are easy if both are frozen',
+        ending: 'specification',
+        result: function() {
+            return confirmEnding(this.string, this.ending);
+        }
+    };
 
-    assert.equal(expected, actual, 'It should return true');
+    const case2 = {
+        string: 'He has to give me a new name',
+        ending: 'na',
+        result: function() {
+            return confirmEnding(this.string, this.ending);
+        }
+    };
+
+    const case3 = {
+        string: 'If you want to save our world, you must hurry. We dont know how much longer we can withstand the nothing',
+        ending: 'mountain',
+        result: function() {
+            return confirmEnding(this.string, this.ending);
+        }
+    };
+
+    assert.false(case1.result(), 'Returns false that "' + case1.string + '" ends in "' + case1.ending + '"');
+    assert.false(case2.result(), 'Returns false that "' + case2.string + '" ends in "' + case2.ending + '"');
+    assert.false(case3.result(), 'Returns false that "' + case3.string + '" ends in "' + case3.ending + '"');
 
     assert.end();
 });
 
-test('test confirmEnding for true', (assert) => {
-    const expected = true;
-    const actual = confirmEnding('He has to give me a new name', 'me');
+test('confirmEnding tests for true cases', (assert) => {
+    const case1 = {
+        string: 'He has to give me a new name',
+        ending: 'name',
+        result: function() {
+            return confirmEnding(this.string, this.ending);
+        }
+    };
 
-    assert.equal(expected, actual, 'It should return true');
+    const case2 = {
+        string: 'He has to give me a new name',
+        ending: 'me',
+        result: function() {
+            return confirmEnding(this.string, this.ending);
+        }
+    };
 
-    assert.end();
-});
-
-test('test confirmEnding for false', (assert) => {
-    const expected = false;
-    const actual = confirmEnding('He has to give me a new name', 'na');
-
-    assert.equal(expected, actual, 'It should return false');
-
-    assert.end();
-});
-
-test('test confirmEnding for false', (assert) => {
-    const expected = false;
-    const actual = confirmEnding('If you want to save our world, you must hurry. We dont know how much longer we can withstand the nothing', 'mountain');
-
-    assert.equal(expected, actual, 'It should return false');
+    assert.true(case1.result(), 'Returns true that "' + case1.string + '" ends in "' + case1.ending + '"');
+    assert.true(case2.result(), 'Returns true that "' + case2.string + '" ends in "' + case2.ending + '"');
 
     assert.end();
 });
