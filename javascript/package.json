@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Solutions for challenges presented at freecodecamp",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-umd": "^0.2.0",
@@ -11,7 +12,7 @@
     "tape": "^4.5.1"
   },
   "scripts": {
-    "test": "tape ./**/test/*.js && jshint ./**/*.js"
+    "test": "tape ./**/test/*.js && jshint ./**/src/*.js && jshint ./**/test/*.js"
   },
   "repository": {
     "type": "git",
