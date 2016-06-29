@@ -1,5 +1,5 @@
-var test = require('tape');
-var factorialize = require('../src/factorialize');
+const test = require('tape');
+const factorialize = require('../src/factorialize');
 
 test('It should return a number', (assert) => {
     const result = factorialize(5);

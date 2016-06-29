@@ -1,5 +1,5 @@
-var test = require('tape');
-var truncateString = require('../src/truncateString');
+const test = require('tape');
+const truncateString = require('../src/truncateString');
 
 test('Truncate to 11 characters', (assert) => {
     const expected = 'A-tisket...';

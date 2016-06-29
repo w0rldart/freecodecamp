@@ -1,5 +1,5 @@
-var test = require('tape');
-var repeatString = require('../src/repeatString');
+const test = require('tape');
+const repeatString = require('../src/repeatString');
 
 test('Repeat 3 times * character', (assert) => {
     const expected = '***';

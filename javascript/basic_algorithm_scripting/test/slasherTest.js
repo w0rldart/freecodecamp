@@ -1,2 +1,2 @@
-var test = require('tape');
-var slasher = require('../src/slasher');
+const test = require('tape');
+const slasher = require('../src/slasher');

@@ -1,5 +1,5 @@
-var test = require('tape');
-var confirmEnding = require('../src/confirmEnding');
+const test = require('tape');
+const confirmEnding = require('../src/confirmEnding');
 
 test('confirmEnding should return a boolean in any case', (assert) => {
     const resultTrue = confirmEnding('Bastian', 'n');

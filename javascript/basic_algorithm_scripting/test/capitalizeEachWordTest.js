@@ -1,5 +1,5 @@
-var test = require('tape');
-var capitalizeEachWord = require('../src/capitalizeEachWord');
+const test = require('tape');
+const capitalizeEachWord = require('../src/capitalizeEachWord');
 
 test('Test for string', (assert) => {
     const result = capitalizeEachWord('I\'m a little tea pot');

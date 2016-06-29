@@ -1,5 +1,5 @@
-var test = require('tape');
-var longestWord = require('../src/longestWord');
+const test = require('tape');
+const longestWord = require('../src/longestWord');
 
 test('It should return a number', (assert) => {
     const result = longestWord('The quick brown fox jumped over the lazy dog');

@@ -1,5 +1,5 @@
-var test = require('tape');
-var palindrome = require('../src/palindrome');
+const test = require('tape');
+const palindrome = require('../src/palindrome');
 
 test('Test that it returns boolean', (assert) => {
     const result = palindrome('eye');

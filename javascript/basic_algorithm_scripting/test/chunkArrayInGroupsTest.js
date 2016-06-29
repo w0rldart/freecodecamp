@@ -1,5 +1,5 @@
-var test = require('tape');
-var chunkArrayInGroups = require('../src/chunkArrayInGroups');
+const test = require('tape');
+const chunkArrayInGroups = require('../src/chunkArrayInGroups');
 
 test('chunkArrayInGroups of 2', (assert) => {
     const expected = [["a", "b"], ["c", "d"]];

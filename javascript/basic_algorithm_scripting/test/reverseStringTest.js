@@ -1,5 +1,5 @@
-var test = require('tape');
-var reverseString = require('../src/reverseString');
+const test = require('tape');
+const reverseString = require('../src/reverseString');
 
 test('Test for string', (assert) => {
     const result = reverseString('abc');
