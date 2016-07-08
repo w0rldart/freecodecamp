@@ -1,7 +1,7 @@
 const test = require('tape');
 const confirmEnding = require('../src/confirmEnding');
 
-test('confirmEnding should return a boolean in any case', (assert) => {
+test('function output is typeof boolean', (assert) => {
     const resultTrue = confirmEnding('Bastian', 'n');
     const resultFalse = confirmEnding('Bastian', 'a');
 
@@ -11,7 +11,9 @@ test('confirmEnding should return a boolean in any case', (assert) => {
     assert.end();
 });
 
-test('confirmEnding tests for false cases', (assert) => {
+test('confirmEnding returns false', (assert) => {
+    assert.plan(3);
+
     const case1 = {
         string: 'Walking on water and developing software from a specification are easy if both are frozen',
         ending: 'specification',
@@ -36,14 +38,14 @@ test('confirmEnding tests for false cases', (assert) => {
         }
     };
 
-    assert.false(case1.result(), 'Returns false that "' + case1.string + '" ends in "' + case1.ending + '"');
-    assert.false(case2.result(), 'Returns false that "' + case2.string + '" ends in "' + case2.ending + '"');
-    assert.false(case3.result(), 'Returns false that "' + case3.string + '" ends in "' + case3.ending + '"');
+    assert.false(case1.result(), 'should return false that "' + case1.string + '" ends in "' + case1.ending + '"');
+    assert.false(case2.result(), 'should return false that "' + case2.string + '" ends in "' + case2.ending + '"');
+    assert.false(case3.result(), 'should return false that "' + case3.string + '" ends in "' + case3.ending + '"');
 
     assert.end();
 });
 
-test('confirmEnding tests for true cases', (assert) => {
+test('confirmEnding returns true', (assert) => {
     const case1 = {
         string: 'He has to give me a new name',
         ending: 'name',
@@ -60,8 +62,8 @@ test('confirmEnding tests for true cases', (assert) => {
         }
     };
 
-    assert.true(case1.result(), 'Returns true that "' + case1.string + '" ends in "' + case1.ending + '"');
-    assert.true(case2.result(), 'Returns true that "' + case2.string + '" ends in "' + case2.ending + '"');
+    assert.true(case1.result(), 'should return true that "' + case1.string + '" ends in "' + case1.ending + '"');
+    assert.true(case2.result(), 'should return true that "' + case2.string + '" ends in "' + case2.ending + '"');
 
     assert.end();
 });

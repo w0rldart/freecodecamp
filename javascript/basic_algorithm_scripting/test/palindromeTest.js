@@ -1,7 +1,7 @@
 const test = require('tape');
 const palindrome = require('../src/palindrome');
 
-test('Test that it returns boolean', (assert) => {
+test('function output is typeof boolean', (assert) => {
     const result = palindrome('eye');
 
     assert.true(typeof result === 'boolean', 'It should return a boolean');
@@ -9,18 +9,22 @@ test('Test that it returns boolean', (assert) => {
     assert.end();
 });
 
-test('race car', (assert) => {
-    const expected = true;
-    const actual = palindrome('race car');
+test('string is palindrome', (assert) => {
+    case1 = {
+        expected: true,
+        actual: palindrome('race car')
+    };
 
     assert.equal(expected, actual, 'Should return true');
 
     assert.end();
 });
 
-test('not a palindrome', (assert) => {
-    const expected = false;
-    const actual = palindrome('not a palindrome');
+test('string is not a palindrome', (assert) => {
+    case1 = {
+        expected: false,
+        actual: palindrome('not a palindrome')
+    };
 
     assert.equal(expected, actual, 'Should return false');
 
@@ -28,8 +32,8 @@ test('not a palindrome', (assert) => {
 });
 
 test('A man, a plan, a canal. Panama', (assert) => {
-    const expected = true;
-    const actual = palindrome('A man, a plan, a canal. Panama');
+    expected: true;
+    actual: palindrome('A man, a plan, a canal. Panama');
 
     assert.equal(expected, actual, 'Should return true');
 
@@ -37,8 +41,8 @@ test('A man, a plan, a canal. Panama', (assert) => {
 });
 
 test('never odd or even', (assert) => {
-    const expected = true;
-    const actual = palindrome('never odd or even');
+    expected: true;
+    actual: palindrome('never odd or even');
 
     assert.equal(expected, actual, 'Should return true');
 
@@ -46,8 +50,8 @@ test('never odd or even', (assert) => {
 });
 
 test('nope', (assert) => {
-    const expected = false;
-    const actual = palindrome('nope');
+    expected: false;
+    actual: palindrome('nope');
 
     assert.equal(expected, actual, 'Should return false');
 
@@ -55,8 +59,8 @@ test('nope', (assert) => {
 });
 
 test('almostomla', (assert) => {
-    const expected = false;
-    const actual = palindrome('almostomla');
+    expected: false;
+    actual: palindrome('almostomla');
 
     assert.equal(expected, actual, 'Should return false');
 
@@ -64,8 +68,8 @@ test('almostomla', (assert) => {
 });
 
 test('My age is 0, 0 si ega ym.', (assert) => {
-    const expected = true;
-    const actual = palindrome('My age is 0, 0 si ega ym.');
+    expected: true;
+    actual: palindrome('My age is 0, 0 si ega ym.');
 
     assert.equal(expected, actual, 'Should return true');
 
@@ -73,8 +77,8 @@ test('My age is 0, 0 si ega ym.', (assert) => {
 });
 
 test('1 eye for of 1 eye.', (assert) => {
-    const expected = false;
-    const actual = palindrome('1 eye for of 1 eye.');
+    expected: false;
+    actual: palindrome('1 eye for of 1 eye.');
 
     assert.equal(expected, actual, 'Should return false');
 
@@ -82,8 +86,8 @@ test('1 eye for of 1 eye.', (assert) => {
 });
 
 test('0_0 (: /-\ :) 0-0', (assert) => {
-    const expected = true;
-    const actual = palindrome('0_0 (: /-\ :) 0-0');
+    expected: true;
+    actual: palindrome('0_0 (: /-\ :) 0-0');
 
     assert.equal(expected, actual, 'Should return true');
 
@@ -91,8 +95,8 @@ test('0_0 (: /-\ :) 0-0', (assert) => {
 });
 
 test('five|\_/|four', (assert) => {
-    const expected = false;
-    const actual = palindrome('five|\_/|four');
+    expected: false;
+    actual: palindrome('five|\_/|four');
 
     assert.equal(expected, actual, 'Should return false');
 
